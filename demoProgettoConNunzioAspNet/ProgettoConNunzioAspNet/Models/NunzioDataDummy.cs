@@ -12,4 +12,14 @@ public partial class NunzioDataDummy
     public string? Descrizione { get; set; }
 
     public int? Numero { get; set; }
+
+    public NunzioDataDummy NunzioDataDummyBuilder()
+    {
+        NunzioDataDummy _dataDummy = new NunzioDataDummy();
+
+        _dataDummy.Numero = 100;
+        _dataDummy.Descrizione = "Vuolsi così colà dove si puote";
+
+        return _dataDummy;
+    }
 }

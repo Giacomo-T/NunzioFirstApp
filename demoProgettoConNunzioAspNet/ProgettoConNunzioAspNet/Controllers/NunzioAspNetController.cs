@@ -41,10 +41,13 @@ namespace ProgettoConNunzioAspNet.Controllers
             return Ok(_ctx.NunzioDataDummies.ToList());
         }
 
-        /*[HttpPost("PostNunzioDummyData")]
+        [HttpPost("PostNunzioDummyData")]
         public IActionResult PostFakeNunzioDummyData()
         {
-            NunzioDataDummy _dataDummy = NunzioDataDummyBuilder();
+            NunzioDataDummy _dataDummy = new NunzioDataDummy();
+
+            _dataDummy.Numero = 100;
+            _dataDummy.Descrizione = "Vuolsi così colà dove si puote";
 
             _ctx.NunzioDataDummies.Add(_dataDummy);
             _ctx.SaveChanges();
@@ -52,19 +55,58 @@ namespace ProgettoConNunzioAspNet.Controllers
             return Ok(_dataDummy);
         }
 
-        public NunzioDataDummy NunzioDataDummyBuilder()
+        [HttpPost("Post100NunzioDummyData")]
+        public IActionResult Post100FakeNunzioDummyData()
         {
-            NunzioDataDummy _dataDummy = new NunzioDataDummy();
+            List<NunzioDataDummy> _dataDummyList = new List<NunzioDataDummy>();
 
-            _dataDummy.Id = 1;
-            _dataDummy.Numero = 100;
-            _dataDummy.Descrizione = "Vuolsi così colà dove si puote";
+            for (int i = 0; i < 100; i++)
+            {
+                var _dataDummy = new NunzioDataDummy
+                {
+                    Numero = i * 5,
+                    Descrizione = $"Dummy data n°{i + 1}"
+                };
+                _dataDummyList.Add(_dataDummy);
+            }
 
-            return _dataDummy;
+            foreach (var item in _dataDummyList)
+            {
+                _ctx.NunzioDataDummies.Add(item);
+            }
+
+            _ctx.SaveChanges();
+
+            return Ok(_dataDummyList);
         }
 
-        /*[HttpPost("PostRealNunzioDummyData")]
-        public IActionResult PostRealNunzioDummyData([FromBody] NunzioDataDummy model)
+        [HttpPost("Post100000NunzioDummyData")]
+        public IActionResult Post100000FakeNunzioDummyData()
+        {
+            List<NunzioDataDummy> _dataDummyList = new List<NunzioDataDummy>();
+
+            for (int i = 0; i < 100000; i++)
+            {
+                var _dataDummy = new NunzioDataDummy
+                {
+                    Numero = i * 5,
+                    Descrizione = $"Dummy data n°{i + 1}"
+                };
+                _dataDummyList.Add(_dataDummy);
+            }
+
+            foreach (var item in _dataDummyList)
+            {
+                _ctx.NunzioDataDummies.Add(item);
+            }
+
+            _ctx.SaveChanges();
+
+            return Ok(_dataDummyList);
+        }
+
+        [HttpPost("PostRealNunzioDummyData")]
+        public IActionResult PostRealNunzioDummyData([FromBody] NunzioDataDummyModel model)
         {
             // Crea un nuovo inventario
             NunzioDataDummy _dataDummy = new NunzioDataDummy()
@@ -78,6 +120,7 @@ namespace ProgettoConNunzioAspNet.Controllers
             _ctx.SaveChanges();
 
             return Ok(_dataDummy);
-        }*/
+        }
     }
 }
+
