@@ -1,3 +1,8 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using ProgettoConNunzioAspNet.Models;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+string connectionString = "Server=DESKTOP-UQASFNC\\SQLENNESIMA;Database=NunzioDatabase;TrustServerCertificate=true;Trusted_Connection=true;";
+
+builder.Services.AddDbContext<NunzioDbDemoContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString(connectionString)));
 
 var app = builder.Build();
 
