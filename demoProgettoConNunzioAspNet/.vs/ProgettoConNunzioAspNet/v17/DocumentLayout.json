@@ -1,7 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Giacomo\\source\\repos\\Giacomo-T\\NunzioFirstApp\\ProgettoConNunzioAspNet\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|c:\\users\\giacomo\\source\\repos\\nunziofirstapp\\demoprogettoconnunzioaspnet\\progettoconnunzioaspnet\\controllers\\nunzioaspnetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|solutionrelative:progettoconnunzioaspnet\\controllers\\nunzioaspnetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|c:\\users\\giacomo\\source\\repos\\nunziofirstapp\\demoprogettoconnunzioaspnet\\progettoconnunzioaspnet\\models\\nunziodbdemocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|solutionrelative:progettoconnunzioaspnet\\models\\nunziodbdemocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|c:\\users\\giacomo\\source\\repos\\nunziofirstapp\\demoprogettoconnunzioaspnet\\progettoconnunzioaspnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|solutionrelative:progettoconnunzioaspnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|c:\\users\\giacomo\\source\\repos\\nunziofirstapp\\demoprogettoconnunzioaspnet\\progettoconnunzioaspnet\\models\\nunziodatadummy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|solutionrelative:progettoconnunzioaspnet\\models\\nunziodatadummy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|c:\\users\\giacomo\\source\\repos\\nunziofirstapp\\demoprogettoconnunzioaspnet\\progettoconnunzioaspnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|solutionrelative:progettoconnunzioaspnet\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|c:\\users\\giacomo\\source\\repos\\nunziofirstapp\\demoprogettoconnunzioaspnet\\progettoconnunzioaspnet\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{683A75EF-A3FB-4471-9F46-00169E92F14F}|ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj|solutionrelative:progettoconnunzioaspnet\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,15 +34,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ProgettoConNunzioAspNet\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\appsettings.Development.json",
+              "RelativeToolTip": "ProgettoConNunzioAspNet\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-21T13:41:00.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\appsettings.json",
+              "RelativeDocumentMoniker": "ProgettoConNunzioAspNet\\appsettings.json",
+              "ToolTip": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\appsettings.json",
+              "RelativeToolTip": "ProgettoConNunzioAspNet\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-21T13:39:32.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NunzioDataDummy.cs",
+              "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\Models\\NunzioDataDummy.cs",
+              "RelativeDocumentMoniker": "ProgettoConNunzioAspNet\\Models\\NunzioDataDummy.cs",
+              "ToolTip": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\Models\\NunzioDataDummy.cs",
+              "RelativeToolTip": "ProgettoConNunzioAspNet\\Models\\NunzioDataDummy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T10:32:12.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NunzioDbDemoContext.cs",
+              "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\Models\\NunzioDbDemoContext.cs",
+              "RelativeDocumentMoniker": "ProgettoConNunzioAspNet\\Models\\NunzioDbDemoContext.cs",
+              "ToolTip": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\Models\\NunzioDbDemoContext.cs",
+              "RelativeToolTip": "ProgettoConNunzioAspNet\\Models\\NunzioDbDemoContext.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAawBQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T10:19:39.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NunzioAspNetController.cs",
+              "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\Controllers\\NunzioAspNetController.cs",
+              "RelativeDocumentMoniker": "ProgettoConNunzioAspNet\\Controllers\\NunzioAspNetController.cs",
+              "ToolTip": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\Controllers\\NunzioAspNetController.cs*",
+              "RelativeToolTip": "ProgettoConNunzioAspNet\\Controllers\\NunzioAspNetController.cs*",
+              "ViewState": "AQIAACIAAAAAAAAAAAAUwCsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T16:55:17.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\Program.cs",
+              "RelativeDocumentMoniker": "ProgettoConNunzioAspNet\\Program.cs",
+              "ToolTip": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\Program.cs",
+              "RelativeToolTip": "ProgettoConNunzioAspNet\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAmwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T16:18:38.957Z",
+              "EditorCaption": ""
             }
           ]
         }

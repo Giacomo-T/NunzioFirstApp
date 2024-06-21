@@ -9,13 +9,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
-string connectionString = "Server=DESKTOP-UQASFNC\\SQLENNESIMA;Database=NunzioDatabase;TrustServerCertificate=true;Trusted_Connection=true;";
+string connectionString = "DefaultConnection";
 
 builder.Services.AddDbContext<NunzioDbDemoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString(connectionString)));
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 

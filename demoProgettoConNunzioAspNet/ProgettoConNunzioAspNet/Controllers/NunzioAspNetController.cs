@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using ProgettoConNunzioAspNet.Models;
-//using ProgettoConNunzioAspNet.Models;
 
 namespace ProgettoConNunzioAspNet.Controllers
 {
@@ -21,7 +20,7 @@ namespace ProgettoConNunzioAspNet.Controllers
         }
 
         [HttpGet(Name = "GetNunzioAspNetDummyData")]
-        public IEnumerable<NunzioDataDummy> Get()
+        public IEnumerable<NunzioDataDummy> GetFakeNunzioDataDummy()
         {
             var nunzioDatabases = new List<NunzioDataDummy>
             {
@@ -35,11 +34,50 @@ namespace ProgettoConNunzioAspNet.Controllers
             return nunzioDatabases;
         }
 
-        /*[HttpGet(Name = "GetAllNunzioDataDummy")]
-        public IEnumerable<NunzioDataDummy> GetAll()
+
+        [HttpGet("GetAllNunzioDummyData")]
+        public IActionResult GetAllNunzioDataDummy()
         {
-            return _ctx.NunzioDataDummies.ToList();
+            return Ok(_ctx.NunzioDataDummies.ToList());
+        }
+
+        /*[HttpPost("PostNunzioDummyData")]
+        public IActionResult PostFakeNunzioDummyData()
+        {
+            NunzioDataDummy _dataDummy = NunzioDataDummyBuilder();
+
+            _ctx.NunzioDataDummies.Add(_dataDummy);
+            _ctx.SaveChanges();
+
+            return Ok(_dataDummy);
+        }
+
+        public NunzioDataDummy NunzioDataDummyBuilder()
+        {
+            NunzioDataDummy _dataDummy = new NunzioDataDummy();
+
+            _dataDummy.Id = 1;
+            _dataDummy.Numero = 100;
+            _dataDummy.Descrizione = "Vuolsi così colà dove si puote";
+
+            return _dataDummy;
+        }
+
+        /*[HttpPost("PostRealNunzioDummyData")]
+        public IActionResult PostRealNunzioDummyData([FromBody] NunzioDataDummy model)
+        {
+            // Crea un nuovo inventario
+            NunzioDataDummy _dataDummy = new NunzioDataDummy()
+            {
+                Numero = model.Numero,
+                Descrizione=model.Descrizione
+            };
+
+            // Aggiunge l'inventario al contesto e salva le modifiche
+            _ctx.NunzioDataDummies.Add(_dataDummy);
+            _ctx.SaveChanges();
+
+            return Ok(_dataDummy);
         }*/
     }
 }
-

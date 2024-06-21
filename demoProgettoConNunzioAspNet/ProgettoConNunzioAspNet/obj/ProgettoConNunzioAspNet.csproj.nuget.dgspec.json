@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Giacomo\\Source\\Repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj": {}
+    "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Giacomo\\Source\\Repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj": {
+    "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Giacomo\\Source\\Repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj",
+        "projectUniqueName": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj",
         "projectName": "ProgettoConNunzioAspNet",
-        "projectPath": "C:\\Users\\Giacomo\\Source\\Repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj",
+        "projectPath": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj",
         "packagesPath": "C:\\Users\\Giacomo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Giacomo\\Source\\Repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\obj\\",
         "projectStyle": "PackageReference",

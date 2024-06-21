@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5EZkm5E9fvQ=",
+  "dgSpecHash": "pJNcgtbcFiI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Giacomo\\Source\\Repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj",
+  "projectFilePath": "C:\\Users\\Giacomo\\source\\repos\\NunzioFirstApp\\demoProgettoConNunzioAspNet\\ProgettoConNunzioAspNet\\ProgettoConNunzioAspNet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Giacomo\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Giacomo\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
