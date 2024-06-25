@@ -43,6 +43,15 @@ namespace ProgettoConNunzioAspNet.Controllers
             }
         }
 
+        [HttpGet("GetFirst100NunzioDummyData")]
+        public IActionResult GetFirst100NunzioDataDummy()
+        {
+            using (var Db = new NunzioDbDemoContext())
+            {
+                return Ok(Db.NunzioDataDummies.Where(p=>p.Id<101).ToList());
+            }
+        }
+
         [HttpPost("PostNunzioDummyData")]
         public IActionResult PostFakeNunzioDummyData()
         {
