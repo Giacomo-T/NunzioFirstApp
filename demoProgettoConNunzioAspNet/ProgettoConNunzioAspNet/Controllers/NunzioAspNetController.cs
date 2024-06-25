@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using ProgettoConNunzioAspNet.Models;
+using System.Collections.Generic;
 
 namespace ProgettoConNunzioAspNet.Controllers
 {
@@ -84,15 +85,20 @@ namespace ProgettoConNunzioAspNet.Controllers
         public IActionResult Post100000FakeNunzioDummyData()
         {
             List<NunzioDataDummy> _dataDummyList = new List<NunzioDataDummy>();
+            List<NunzioDataDummy> returndataDummyList = new List<NunzioDataDummy>();
 
             for (int i = 0; i < 100000; i++)
             {
+
                 var _dataDummy = new NunzioDataDummy
                 {
-                    Numero = i * 5,
+                    Numero = i * 5^2,
                     Descrizione = $"Dummy data n°{i + 1}"
                 };
                 _dataDummyList.Add(_dataDummy);
+
+                if (i == 0) returndataDummyList.Add(_dataDummy);
+                if (i == 99999) returndataDummyList.Add(_dataDummy);
             }
 
             foreach (var item in _dataDummyList)
@@ -102,7 +108,7 @@ namespace ProgettoConNunzioAspNet.Controllers
 
             _ctx.SaveChanges();
 
-            return Ok(_dataDummyList);
+            return Ok(returndataDummyList);
         }
 
         [HttpPost("PostRealNunzioDummyData")]

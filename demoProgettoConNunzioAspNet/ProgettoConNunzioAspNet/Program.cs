@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
-string connectionString = "DefaultConnection";
+string connectionString = "SimoConnection";
 
 builder.Services.AddDbContext<NunzioDbDemoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString(connectionString)));
