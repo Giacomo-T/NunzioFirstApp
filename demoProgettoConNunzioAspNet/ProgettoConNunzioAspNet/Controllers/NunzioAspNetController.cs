@@ -12,12 +12,10 @@ namespace ProgettoConNunzioAspNet.Controllers
     public class NunzioAspNetController : ControllerBase
     {
         private readonly ILogger<NunzioAspNetController> _logger;
-        private readonly NunzioDbDemoContext _ctx;
 
-        public NunzioAspNetController(ILogger<NunzioAspNetController> logger, NunzioDbDemoContext ctx)
+        public NunzioAspNetController(ILogger<NunzioAspNetController> logger)
         {
             _logger = logger;
-            _ctx = ctx;
         }
 
         [HttpGet(Name = "GetNunzioAspNetDummyData")]
@@ -39,7 +37,10 @@ namespace ProgettoConNunzioAspNet.Controllers
         [HttpGet("GetAllNunzioDummyData")]
         public IActionResult GetAllNunzioDataDummy()
         {
-            return Ok(_ctx.NunzioDataDummies.ToList());
+            using (var Db = new NunzioDbDemoContext() )
+            {
+                return Ok(Db.NunzioDataDummies.ToList());
+            }
         }
 
         [HttpPost("PostNunzioDummyData")]
@@ -50,8 +51,11 @@ namespace ProgettoConNunzioAspNet.Controllers
             _dataDummy.Numero = 100;
             _dataDummy.Descrizione = "Vuolsi così colà dove si puote";
 
-            _ctx.NunzioDataDummies.Add(_dataDummy);
-            _ctx.SaveChanges();
+            using (var Db = new NunzioDbDemoContext())
+            {
+                Db.NunzioDataDummies.Add(_dataDummy);
+                Db.SaveChanges();
+            }
 
             return Ok(_dataDummy);
         }
@@ -71,12 +75,16 @@ namespace ProgettoConNunzioAspNet.Controllers
                 _dataDummyList.Add(_dataDummy);
             }
 
-            foreach (var item in _dataDummyList)
+            using (var Db = new NunzioDbDemoContext())
             {
-                _ctx.NunzioDataDummies.Add(item);
-            }
 
-            _ctx.SaveChanges();
+                foreach (var item in _dataDummyList)
+                {
+                    Db.NunzioDataDummies.Add(item);
+                }
+
+                Db.SaveChanges();
+            }
 
             return Ok(_dataDummyList);
         }
@@ -101,12 +109,16 @@ namespace ProgettoConNunzioAspNet.Controllers
                 if (i == 99999) returndataDummyList.Add(_dataDummy);
             }
 
-            foreach (var item in _dataDummyList)
+            using (var Db = new NunzioDbDemoContext())
             {
-                _ctx.NunzioDataDummies.Add(item);
-            }
 
-            _ctx.SaveChanges();
+                foreach (var item in _dataDummyList)
+                {
+                    Db.NunzioDataDummies.Add(item);
+                }
+
+                Db.SaveChanges();
+            }
 
             return Ok(returndataDummyList);
         }
@@ -118,12 +130,15 @@ namespace ProgettoConNunzioAspNet.Controllers
             NunzioDataDummy _dataDummy = new NunzioDataDummy()
             {
                 Numero = model.Numero,
-                Descrizione=model.Descrizione
+                Descrizione = model.Descrizione
             };
 
             // Aggiunge l'inventario al contesto e salva le modifiche
-            _ctx.NunzioDataDummies.Add(_dataDummy);
-            _ctx.SaveChanges();
+            using (var Db = new NunzioDbDemoContext())
+            {
+                Db.NunzioDataDummies.Add(_dataDummy);
+                Db.SaveChanges();
+            }
 
             return Ok(_dataDummy);
         }
