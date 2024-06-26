@@ -12,10 +12,12 @@ namespace ProgettoConNunzioAspNet.Controllers
     public class NunzioAspNetController : ControllerBase
     {
         private readonly ILogger<NunzioAspNetController> _logger;
+        private readonly NunzioDbDemoContext _dbContext;
 
-        public NunzioAspNetController(ILogger<NunzioAspNetController> logger)
+        public NunzioAspNetController(ILogger<NunzioAspNetController> logger, NunzioDbDemoContext dbContext)
         {
             _logger = logger;
+            _dbContext = dbContext;
         }
 
         [HttpGet(Name = "GetNunzioAspNetDummyData")]
@@ -37,19 +39,20 @@ namespace ProgettoConNunzioAspNet.Controllers
         [HttpGet("GetAllNunzioDummyData")]
         public IActionResult GetAllNunzioDataDummy()
         {
-            using (var Db = new NunzioDbDemoContext() )
-            {
-                return Ok(Db.NunzioDataDummies.ToList());
-            }
+            //return Ok(_dbContext.NunzioDataDummies.ToList()); troppo lunga: bisogna fare qualcosa
+            return Ok();
         }
 
         [HttpGet("GetFirst100NunzioDummyData")]
         public IActionResult GetFirst100NunzioDataDummy()
         {
-            using (var Db = new NunzioDbDemoContext())
-            {
-                return Ok(Db.NunzioDataDummies.Where(p=>p.Id<101).ToList());
-            }
+            return Ok(_dbContext.NunzioDataDummies.Where(p=>p.Id<101).ToList());
+        }
+
+        [HttpGet("GetFirst100NunzioDummyDataContext")]
+        public IActionResult GetFirst100NunzioDataDummyContext()
+        {
+            return Ok(_dbContext.NunzioDataDummies.Where(p => p.Id < 101).ToList());
         }
 
         [HttpPost("PostNunzioDummyData")]
@@ -60,11 +63,8 @@ namespace ProgettoConNunzioAspNet.Controllers
             _dataDummy.Numero = 100;
             _dataDummy.Descrizione = "Vuolsi così colà dove si puote";
 
-            using (var Db = new NunzioDbDemoContext())
-            {
-                Db.NunzioDataDummies.Add(_dataDummy);
-                Db.SaveChanges();
-            }
+            _dbContext.NunzioDataDummies.Add(_dataDummy);
+            _dbContext.SaveChanges();
 
             return Ok(_dataDummy);
         }
@@ -81,19 +81,16 @@ namespace ProgettoConNunzioAspNet.Controllers
                     Numero = i * 5,
                     Descrizione = $"Dummy data n°{i + 1}"
                 };
+
                 _dataDummyList.Add(_dataDummy);
             }
 
-            using (var Db = new NunzioDbDemoContext())
-            {
-
-                foreach (var item in _dataDummyList)
-                {
-                    Db.NunzioDataDummies.Add(item);
-                }
-
-                Db.SaveChanges();
-            }
+             foreach (var item in _dataDummyList)
+             {
+                 _dbContext.NunzioDataDummies.Add(item);
+             }
+            
+             _dbContext.SaveChanges();
 
             return Ok(_dataDummyList);
         }
@@ -118,16 +115,12 @@ namespace ProgettoConNunzioAspNet.Controllers
                 if (i == 99999) returndataDummyList.Add(_dataDummy);
             }
 
-            using (var Db = new NunzioDbDemoContext())
+            foreach (var item in _dataDummyList)
             {
-
-                foreach (var item in _dataDummyList)
-                {
-                    Db.NunzioDataDummies.Add(item);
-                }
-
-                Db.SaveChanges();
+                _dbContext.NunzioDataDummies.Add(item);
             }
+            
+            _dbContext.SaveChanges();
 
             return Ok(returndataDummyList);
         }
@@ -143,11 +136,8 @@ namespace ProgettoConNunzioAspNet.Controllers
             };
 
             // Aggiunge l'inventario al contesto e salva le modifiche
-            using (var Db = new NunzioDbDemoContext())
-            {
-                Db.NunzioDataDummies.Add(_dataDummy);
-                Db.SaveChanges();
-            }
+            _dbContext.NunzioDataDummies.Add(_dataDummy);
+            _dbContext.SaveChanges();
 
             return Ok(_dataDummy);
         }
